@@ -1,3 +1,5 @@
+import os
+
 class HandleTxt:
     def __init__(self, text):
         self.text = text
@@ -12,6 +14,7 @@ class HandleTxt:
         try:
             with open(new_filename, 'wb') as file:
                 file.write(data)
+                os.remove(self.text)
             return True  
         except Exception as e:
             print(f"An error occurred at HandleTxt.writeTextToFile: {e}")

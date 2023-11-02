@@ -15,6 +15,7 @@ class UtilText:
     def decryptText(self):
         try:
             file_contents = self.getText.getTextFill()
+            print(self.encryptObj.decrypt(file_contents))
             return True  
         except Exception as e:
             print(f"An error occurred at UtilText.decryptText: {e}")
