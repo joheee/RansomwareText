@@ -14,5 +14,5 @@ class HandleTxt:
                 file.write(data)
             return True  
         except Exception as e:
-            print(f"An error occurred: {e}")
+            print(f"An error occurred at HandleTxt.writeTextToFile: {e}")
             return False  
