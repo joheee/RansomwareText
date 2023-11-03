@@ -1,15 +1,16 @@
-from logic.EncryptDecrypt import EncryptDecrypt
-from controller.HandleTxt import HandleTxt
+from logic.encrypt_decrypt import EncryptDecrypt
+from controller.handle_txt import HandleTxt
+from utils.util_text import UtilText
 
 getText = HandleTxt('test.txt')
-file_contents = getText.getTextFill()
+getTextEncrypted = HandleTxt('test_encrypt.txt')
+encryptObj = EncryptDecrypt()
+
+# util_text = UtilText(getText, encryptObj)
+util_text_decrypt = UtilText(getTextEncrypted, encryptObj)
 
 # encrypt to test_encrypt.txt
-encryptObj = EncryptDecrypt()
-print(encryptObj.encrypt(file_contents))
-getText.writeTextToFile(encryptObj.encrypt(file_contents))
+# print(util_text.encryptText())
 
 # decrypt it from test_encrypt.txt
-getText = HandleTxt('test_encrypt.txt')
-file_contents = getText.getTextFill()
-print(encryptObj.decrypt(file_contents))
+print(util_text_decrypt.decryptText('LzZscC50NQEmSVNb9FBlP9dJsYWPZZowYkR6Ds_v-K8='))
