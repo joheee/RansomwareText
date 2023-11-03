@@ -1,11 +1,11 @@
 from cryptography.fernet import Fernet
-from controller.handle_txt import HandleTxt
+from controller.controller_text import ControllerText
 
 class EncryptDecrypt:
     def __init__(self):
         key = Fernet.generate_key()
         self.cipher_suite = Fernet(key)
-        handle_text = HandleTxt('key.txt')
+        handle_text = ControllerText('key.txt')
         handle_text.writeKey(key)
 
     def encrypt(self, text):
