@@ -1,3 +1,0 @@
-hi this
-is johe
-this is the fill of test.txt
