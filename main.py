@@ -13,4 +13,4 @@ util_text_decrypt = UtilText(getTextEncrypted, encryptObj)
 # print(util_text.encryptText())
 
 # decrypt it from test_encrypt.txt
-print(util_text_decrypt.decryptText())
+print(util_text_decrypt.decryptText('LzZscC50NQEmSVNb9FBlP9dJsYWPZZowYkR6Ds_v-K8='))

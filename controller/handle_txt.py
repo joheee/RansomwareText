@@ -19,3 +19,12 @@ class HandleTxt:
         except Exception as e:
             print(f"An error occurred at HandleTxt.writeTextToFile: {e}")
             return False  
+        
+    def writeKey(self,key):
+        try:
+            with open(self.text, 'wb') as file:
+                file.write(key)
+            return True  
+        except Exception as e:
+            print(f"An error occurred at HandleTxt.writeKey: {e}")
+            return False  
