@@ -15,7 +15,7 @@ class ControllerText:
         try:
             with open(new_filename, 'wb') as file:
                 file.write(data)
-                # os.remove(self.text)
+                os.remove(self.text)
             return True  
         except Exception as e:
             print(f"An error occurred at ControllerText.writeEncryptTextToFile: {e}")
@@ -28,7 +28,7 @@ class ControllerText:
         try:
             with open(new_filename, 'wb') as file:
                 file.write(data.encode('utf-8'))
-                # os.remove(self.text)
+                os.remove(self.text)
             return True  
         except Exception as e:
             print(f"An error occurred at ControllerText.writeDecryptTextToFile: {e}")
