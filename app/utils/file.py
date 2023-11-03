@@ -6,8 +6,8 @@ class File:
     
     def getFileList(self):
         list = []
-        # directory_path = os.getcwd()
-        directory_path = 'J:/testingbang'
+        directory_path = os.getcwd()
+        # directory_path = 'J:/testingbang'
         ignore_dirs_and_files = ["app", "__pycache__",'.git','key.txt','main.py']  
 
         for root, directories, files in os.walk(directory_path):
