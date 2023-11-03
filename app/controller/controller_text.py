@@ -24,7 +24,7 @@ class ControllerText:
     def writeDecryptTextToFile(self, data):
         before_extension, extension = self.text.rsplit('.', 1)
         base_filename = before_extension.rsplit('_')  
-        new_filename = f"{base_filename[0]}_decrypt.{extension}"
+        new_filename = f"{base_filename[0]}.{extension}"
         try:
             with open(new_filename, 'wb') as file:
                 file.write(data.encode('utf-8'))

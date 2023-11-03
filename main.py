@@ -14,7 +14,7 @@ file = File()
 #     print(f'encrypt {file_path} is {util_text.encryptText()}')
 
 # decrypt
-# for file_path in file.getFileList():
-#     getText = ControllerText(file_path)
-#     util_text = UtilText(getText, encryptObj)
-#     print(f"decrypt {file_path} is {util_text.decryptText('ngC50xy-yAd5Z97HPJswIFKKLiMX5z2trCUZR29YwSo=')}")
+for file_path in file.getFileList():
+    getText = ControllerText(file_path)
+    util_text = UtilText(getText, encryptObj)
+    print(f"decrypt {file_path} is {util_text.decryptText('EXJ1oa4fwTlLb7di9CP2uTbwnIgAoHutNzRijFdktDc=')}")
