@@ -1,5 +1,5 @@
 from cryptography.fernet import Fernet
-from controller.controller_text import ControllerText
+from app.controller.controller_text import ControllerText
 
 class EncryptDecrypt:
     def __init__(self):
