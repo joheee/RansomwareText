@@ -6,7 +6,7 @@ class UtilText:
     def encryptText(self):
         try:
             file_contents = self.getText.getTextFill()
-            self.getText.writeTextToFile(self.encryptObj.encrypt(file_contents))
+            self.getText.writeEncryptTextToFile(self.encryptObj.encrypt(file_contents))
             return True  
         except Exception as e:
             print(f"An error occurred at UtilText.encryptText: {e}")
@@ -15,7 +15,7 @@ class UtilText:
     def decryptText(self, key):
         try:
             file_contents = self.getText.getTextFill()
-            print(self.encryptObj.decrypt(key, file_contents))
+            self.getText.writeDecryptTextToFile(self.encryptObj.decrypt(key, file_contents))
             return True  
         except Exception as e:
             print(f"An error occurred at UtilText.decryptText: {e}")
