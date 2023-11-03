@@ -13,4 +13,4 @@ class EncryptDecrypt:
 
     def decrypt(self, key, encrypted_text):
         cipher_suite = Fernet(key)
-        return cipher_suite.decrypt(encrypted_text).decode()
+        return cipher_suite.decrypt(encrypted_text).decode('utf-8')
